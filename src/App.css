@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+.header-div {
+    background-color: #FEEFE5;
+    min-height: 150px;
+    padding: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.parallax {
+    /* The image used */
+    background-image: url("./images/ice-cream-background.jpg");
+    /* Set a specific height */
+    min-height: 550px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-div-title {
+    color: #484848;
+    font-weight: normal !important;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.font-helvetica {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.font-alegreya {
+    font-family: 'Alegreya SC', serif;
+    font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font-amatic {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold !important;
+    font-size: 36px;
+}
+
+.content-div {
+    font-size: 20px;
+}
+
+.container-defaults {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.divider {
+    border-left: 1px solid black;
+    height: 30% !important;
+}
+
+.calendar-divider {
+    border-left: 1px solid black;
+    height: 50% !important;
+}
+
+.simple-button {
+    background-color: #FEEFE5;
+    color: black;
+    border: 2px solid #484848;
+    padding: 10px;
+}
+
+.simple-button:hover {
+    background-color: #FFE0CC;
+}
+
+.inverted-button {
+    background-color: #484848;
+    color: #FEEFE5;
+    padding: 10px;
+}
+
+.inverted-button:hover {
+    background-color: #282828;
+}
+
+.center-button {
+    background-color: #484848;
+    color: #FEEFE5;
+    padding: 10px;
+    height: 75px;
+    width: 175px;
+    margin-bottom: -37.5px;
+}
+
+.theme-div {
+    background-color: #FEEFE5;
+    padding: 80px 25px 0;
+}
+
+.theme-button {
+    height: 80%;
+    width: 100%;
+    background-color: #FEFDEF;
+}
+
+.theme-button:hover {
+    background-color: #E4E3D7;
+}
+
+.calendar-div {
+    background-color: #FEEFE5;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+}
+
+.form-style {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-span {
+    color: #484848;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold !important;
+    margin-bottom: -10px;
+}
+
+label, input, textarea {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 22px !important;
+}
+
+.nice-dates-popover {
+    width: 70% !important;
+}
+
+.footer-div {
+    background-color: #FFE0CC;
+    height: 130px;
+    padding: 25px;
+}
+
+.footer-content {
+    padding: 8px;
+}
+
+label.active {
+    background: #FEEFE5 !important;
+}
+
+textarea.md-textarea:focus:not([readonly]) + label {
+    color: #484848 !important;
+}
+
+.md-form.md-outline textarea.md-textarea:focus:not([readonly]) {
+    border-color: #484848 !important;
+    box-shadow: 0 0 0 1px #484848 !important;
+}
+
+.md-form.md-outline input[type="text"]:focus:not([readonly]) + label {
+    color: #484848 !important;
+}
+
+.md-form.md-outline input[type="text"]:focus:not([readonly]) {
+    border-color: #484848 !important;
+    box-shadow: 0 0 0 1px #484848 !important;
 }
