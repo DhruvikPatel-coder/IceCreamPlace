@@ -1,7 +1,7 @@
 import React from "react";
 import LogoContainer from "../Containers/LogoContainer";
 
-// This component responsible for rendering header component
+// Component responsible for rendering header component
 export default function HeaderComponent() {
     return (
         <div className="align-items-center header-div logo-padding">
@@ -16,7 +16,6 @@ export default function HeaderComponent() {
                     Themes
                 </button>
             </a>
-
         </div>
     );
 }

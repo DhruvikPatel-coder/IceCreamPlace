@@ -1,15 +1,15 @@
 import React from "react";
-import HeaderComponent from "./HeaderComponent";
 import StoryComponent from "./StoryComponent";
 import FooterComponent from "./FooterComponent";
 import PreviewComponent from "./PreviewComponent";
+import OutputHeaderComponent from "./OutputHeaderComponent";
 
 // This component renders the output page which is responsible for presenting the output according to theme selected
 export default function OutputComponent(props) {
     return (
         <div>
             {/*Calls header component*/}
-            <HeaderComponent/>
+            <OutputHeaderComponent/>
             {/*Calls story component*/}
             <StoryComponent
                 title={"New forms of Pure Happiness"}
