@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './App.css';
 import './snackbar.css';
-import Redirect, {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import InputComponent from "./Components/InputComponent";
 import OutputComponent from "./Components/OutputComponent";
 import 'react-nice-dates/build/style.css';
