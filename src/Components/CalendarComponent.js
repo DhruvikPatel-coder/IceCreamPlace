@@ -2,8 +2,9 @@ import React from "react";
 import {DatePicker} from "react-nice-dates";
 import {enGB} from "date-fns/locale";
 import {getDay} from "date-fns";
-import TitleButtonContainer from "../Containers/TitleButtonContainer";
+import TitleDivContainer from "../Containers/TitleDivContainer";
 
+// This component is the component responsible for rendering input fields
 export default function CalendarComponent({
                                               date,
                                               content,
@@ -19,6 +20,7 @@ export default function CalendarComponent({
         highlight: '-highlight'
     }
 
+    // Gets the value
     function getValue(e) {
         return e.nativeEvent.target.value;
     }
@@ -29,7 +31,7 @@ export default function CalendarComponent({
                  paddingBottom: "50px"
              }}
         >
-            <TitleButtonContainer
+            <TitleDivContainer
                 text={"plan ahead"}
                 id={"planAhead"}
             />
@@ -82,6 +84,7 @@ export default function CalendarComponent({
                         </div>
                         <div className="col-10 mt-3">
                             <div className="list-group">
+                                {/*Maps the themes available on the date selected*/}
                                 {availableThemes.map(x => {
                                     return (
                                         <a className="list-group-item list-group-item-action font-helvetica text-center mb-1" key={x.name} href={`#${x.name}`}>
@@ -97,6 +100,7 @@ export default function CalendarComponent({
                     </div>
                 </div>
             </div>
+            {/*This div is responsible for sending appropriate messages to user*/}
             <div id="snackbar"/>
         </div>
     );

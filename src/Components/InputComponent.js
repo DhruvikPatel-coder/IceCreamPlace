@@ -5,6 +5,7 @@ import ThemeComponent from "./ThemeComponent";
 import CalendarComponent from "./CalendarComponent";
 import FooterComponent from "./FooterComponent";
 
+// This component renders the input page which is basically the home page of our website
 export default function InputComponent({
                                            setSelectedIndex,
                                            selectedIndex,
@@ -17,8 +18,11 @@ export default function InputComponent({
                                        }) {
     return (
         <div>
+            {/*Calls header*/}
             <HeaderComponent/>
+            {/*The image div to create parallax effect*/}
             <div className="parallax"/>
+            {/*Calls Story component*/}
             <StoryComponent
                 title={"New forms of Pure Happiness"}
                 subtitle1={"We are proud of all our products..."}
@@ -28,6 +32,7 @@ export default function InputComponent({
                 para2={"Our ice cream experts can’t wait to hear about your experience!"}
                 story_title={"specials"}
             />
+            {/*calls calendar component*/}
             <CalendarComponent
                 date={date}
                 content={content}
@@ -35,6 +40,7 @@ export default function InputComponent({
                 setParentContent={(val) => setContent(val)}
                 availableThemes={availableThemes}
             />
+            {/*Calls theme component*/}
             <ThemeComponent
                 date={date}
                 content={content}

@@ -1,13 +1,16 @@
 import React from "react";
 
+// Render themes and its respective properties
 export default function ThemeIcon({
                                       theme,
                                       selectedIndex,
                                       setSelectedIndex,
                                   }) {
+    // Initial array of all the to map the number of month
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
 
+    // extracts the month from start date
     function getStartMonth() {
         let start = theme.availability.start;
         let startDate = new Date(start);
@@ -15,10 +18,12 @@ export default function ThemeIcon({
         return monthNames[startDate.getMonth()].substr(0, 3);
     }
 
+    // extracts the date from start date
     function getStartDate() {
         return (new Date(theme.availability.start)).getDate();
     }
 
+    // extracts month from end date
     function getEndMonth() {
         let end = theme.availability.end;
         let endDate = new Date(end);
@@ -26,6 +31,7 @@ export default function ThemeIcon({
         return monthNames[endDate.getMonth()].substr(0, 3);
     }
 
+    // extracts date drom the end date
     function getEndDate() {
         return (new Date(theme.availability.end)).getDate();
     }
@@ -40,6 +46,7 @@ export default function ThemeIcon({
                 paddingTop: "30px",
                 paddingLeft: "20px"
             }}>
+            {/*Theme button that displays svg*/}
             <button
                 className={`row justify-content-center align-items-center rounded-circle mx-auto ${(selectedIndex === theme.index) ? "theme-button-highlighted" : "theme-button"}`}
                 style={{width: "300px", height: "300px"}}
@@ -80,6 +87,7 @@ export default function ThemeIcon({
                     </defs>
                 </svg>
             </button>
+            {/*Div that describes theme name as well as between what period it is available*/}
             <div
                 className="row d-flex font-amatic"
                 style={{

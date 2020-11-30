@@ -1,5 +1,6 @@
 import React from "react";
 
+// svg for heart
 export default function HeartContainer({height, width}) {
     return (
         <div style={{height: `${height}px`, width: `${width}px`}}>

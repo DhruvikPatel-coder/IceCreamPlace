@@ -3,6 +3,7 @@ import LogoContainer from "../Containers/LogoContainer";
 import HeartContainer from "../Containers/HeartContainer";
 import GitContainer from "../Containers/GitContainer";
 
+// This component responsible for rendering Footer container
 export default function FooterComponent() {
     return (
         <div className="d-flex align-items-center footer-div justify-content-around"

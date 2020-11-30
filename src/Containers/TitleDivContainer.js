@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function TitleButtonContainer({text, id}) {
+// Displays the title "div" of the respective parent container
+export default function TitleDivContainer({text, id}) {
     return (
         <div
             id={id}

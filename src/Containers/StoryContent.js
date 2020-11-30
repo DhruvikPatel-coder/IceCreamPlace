@@ -1,5 +1,6 @@
 import React from "react";
 
+// Container responsible of rendering the content passed to it
 export default function StoryContent({subtitle1, subtitle2, para1, para2}) {
     return (
         <div className="row">

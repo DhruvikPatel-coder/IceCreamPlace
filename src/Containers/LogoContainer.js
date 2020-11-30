@@ -1,5 +1,6 @@
 import React from "react";
 
+// Logo svg
 export default function LogoContainer() {
     return (
         <div className="d-flex align-items-center">

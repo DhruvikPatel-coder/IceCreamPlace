@@ -1,8 +1,9 @@
 import React from "react";
 import ThemeIcon from "../Containers/ThemeIcon";
-import TitleButtonContainer from "../Containers/TitleButtonContainer";
+import TitleDivContainer from "../Containers/TitleDivContainer";
 import {Link} from "react-router-dom";
 
+// This component is responsible of rendering all the themes
 export default function ThemeComponent({
                                            selectedIndex,
                                            setSelectedIndex,
@@ -35,7 +36,7 @@ export default function ThemeComponent({
 
     return (
         <div className="container-fluid theme-div p-0">
-            <TitleButtonContainer
+            <TitleDivContainer
                 text={"pick a theme"}
                 style={{zIndex: 9999}}
                 id={"pickATheme"}

@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {format} from "date-fns";
 import {enGB} from "date-fns/locale";
 
+// This component is responsible of showing the preview of output based on the theme selected.
 export default function PreviewComponent({
                                              date,
                                              content,
@@ -10,6 +11,7 @@ export default function PreviewComponent({
                                              setParentDate,
                                              setParentContent
                                         }) {
+    // Clears the input fields back button is pressed
     function clearChoice(){
         setParentContent("");
         setParentDate();

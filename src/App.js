@@ -6,12 +6,14 @@ import InputComponent from "./Components/InputComponent";
 import OutputComponent from "./Components/OutputComponent";
 import 'react-nice-dates/build/style.css';
 
+// Theme class that binds all information about different themes including their availability
+// Availability in this context indicates what ice cream is available in the selected period of time
 class Theme {
-    name;
-    availability;
-    color;
-    colorSecondary;
-    index;
+    name; // Theme name
+    availability; // Between what time period is the theme available
+    color; // Color of the theme
+    colorSecondary; // Secondary color of the theme (it is required to giving a contrast to the page)
+    index; // represents index number of the theme
 
     constructor(_obj) {
         this.name = _obj.name || "";
@@ -25,6 +27,7 @@ class Theme {
     }
 }
 
+// Filters and look of the themes available on selected date.
 function filterValidDates(themes, date) {
     return themes.filter(x => {
         let startDate = new Date(x.availability.start);
@@ -34,11 +37,15 @@ function filterValidDates(themes, date) {
     })
 }
 
-function App() {
+export default function App() {
+    // The following state keeps track of date that a user selects, initial date will be today's date
     let [date, setDate] = useState(new Date());
+    // The following state keeps track of the text user types in for text field
     let [content, setContent] = useState();
+    // The following state keeps track of the index of theme selected and by default it is very first theme
     let [currentIndex, setCurrentIndex] = useState(0);
 
+    // This is array of all available themes
     let all_themes = [
         new Theme(
             {
@@ -86,7 +93,7 @@ function App() {
             }),
         new Theme(
             {
-                name: "Berry Vanilla",
+                name: "Moe Matcha",
                 availability: {
                     start: "02/24/2020",
                     end: "07/09/2020"
@@ -96,7 +103,7 @@ function App() {
             }),
         new Theme(
             {
-                name: "Moe Matcha",
+                name: "Berry Vanilla",
                 availability: {
                     start: "06/10/2020",
                     end: "01/10/2020"
@@ -145,6 +152,7 @@ function App() {
 
     return (
         <Router>
+            {/*Switch routes by determining the paths*/}
             <Switch>
                 <Route exact path="/IceCreamPlace">
                     <InputComponent
@@ -168,6 +176,7 @@ function App() {
                         setSelectedIndex={(val) =>setCurrentIndex(val)}
                     />
                 </Route>
+                {/*If the path entered does not match any of the paths above then redirect the user to home page*/}
                 <Route path="*">
                     <Redirect to="/IceCreamPlace" />
                 </Route>
@@ -175,5 +184,3 @@ function App() {
         </Router>
     );
 }
-
-export default App;

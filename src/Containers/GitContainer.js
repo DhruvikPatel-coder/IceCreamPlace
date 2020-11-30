@@ -1,6 +1,6 @@
 import React from "react";
 
-
+// Svg for github
 export default function GitContainer({height, width, url}) {
     return (
         <a
