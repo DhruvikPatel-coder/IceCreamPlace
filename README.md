@@ -1,4 +1,9 @@
+# Deployment
+
+### This project is currently deployed using Github Pages and is accessible at [IceCreamPlace](https://dhruvikpatel-coder.github.io/IceCreamPlace/).
+
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
