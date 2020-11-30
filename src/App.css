@@ -1,7 +1,7 @@
 .header-div {
     background-color: #FEEFE5;
     min-height: 150px;
-    padding: 25px;
+    padding: 25px 50px 25px 25px;
     display: flex;
 }
 
@@ -40,6 +40,12 @@
 .divider {
     border-left: 1px solid black;
     height: 170px !important;
+}
+
+.story-title-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
 }
 
 .calendar-divider {
@@ -178,6 +184,20 @@ button:focus {
 }
 
 @media screen and (max-width: 786px){
+    .form-style {
+        width: 95%;
+    }
+
+    .container-defaults {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .small-screen-defaults {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .header-div {
         display: block;
         padding: 50px !important;
@@ -194,6 +214,10 @@ button:focus {
 }
 
 @media screen and (min-width: 786px){
+    .logo-padding {
+        padding-left: 60px;
+    }
+
     .parallax {
         /* The image used */
         background-image: url("./images/ice-cream-background.jpg");
@@ -207,14 +231,14 @@ button:focus {
     }
 }
 
-.col-md-4-icons{
+.col-icons{
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-@media (min-width: 960px) {
-    .col-md-4-icons {
+@media (min-width: 1024px) {
+    .col-icons {
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;

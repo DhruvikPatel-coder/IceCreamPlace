@@ -1,7 +1,9 @@
 import React from "react";
 
-export default function StoryTitle({title, title2}) {
+export default function StoryTitle({title}) {
     return (
-        <p className="left-div-title">{title}<br/>{title2}</p>
+        <div className="form-style my-auto">
+            <p className="left-div-title">{title}</p>
+        </div>
     );
 }

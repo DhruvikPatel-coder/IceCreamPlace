@@ -33,8 +33,8 @@ export default function CalendarComponent({
                 text={"plan ahead"}
                 id={"planAhead"}
             />
-            <div className="row h-100">
-                <div className="col-md-6 container-defaults d-flex justify-content-center">
+            <div className="row h-100 container-defaults">
+                <div className="col-md-6 d-flex small-screen-defaults">
                     <form className="form-style">
                         <span className="my-span">Pick a date</span>
                         <DatePicker
@@ -65,7 +65,7 @@ export default function CalendarComponent({
                                 name="myTextArea"
                                 id="myTextArea"
                                 spellCheck="true"
-                                rows="5"
+                                rows="4"
                                 className="md-textarea form-control"
                                 style={{width: "100%", border: "1px solid #c9bcb3"}}
                             />

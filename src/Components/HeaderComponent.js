@@ -3,8 +3,8 @@ import LogoContainer from "../Containers/LogoContainer";
 
 export default function HeaderComponent() {
     return (
-        <div className="align-items-center header-div">
-            <LogoContainer className="logo-container"/>
+        <div className="align-items-center header-div logo-padding">
+            <LogoContainer/>
             <a href="/IceCreamPlace/#planAhead" className="d-none d-md-block ml-auto">
                 <button  className=" simple-button rounded-pill font-alegreya" style={{height: "50px", width: "150px"}}>
                     Plan ahead

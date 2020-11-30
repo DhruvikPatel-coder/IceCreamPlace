@@ -32,7 +32,7 @@ export default function ThemeIcon({
 
     return (
         <div
-            className="col-md-4-icons"
+            className="col-icons"
             id={theme.name}
             style={{
                 display: "flex",

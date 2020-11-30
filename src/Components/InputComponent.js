@@ -20,8 +20,7 @@ export default function InputComponent({
             <HeaderComponent/>
             <div className="parallax"/>
             <StoryComponent
-                title={"New forms of"}
-                title2={"Pure Happiness"}
+                title={"New forms of Pure Happiness"}
                 subtitle1={"We are proud of all our products..."}
                 subtitle2={"We think you’ll love them!"}
                 para1={"... and super excited to add new ones to the family! Only here for a limited period of time, " +

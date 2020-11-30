@@ -25,15 +25,23 @@ export default function PreviewComponent({
             <div className="row h-100 d-flex flex-row align-items-center justify-content-center w-100">
                 <div className="col-md-6 container-defaults d-flex justify-content-center">
                     <form className="form-style">
-                        <span className="my-span" style={{color: selectedTheme.colorSecondary}}>Your date</span>
+                        <span
+                            className="my-span"
+                            style={{
+                                color: selectedTheme.colorSecondary
+                            }}>Your date</span>
                         <h1>{date && format(date, 'dd MMM yyyy', {locale: enGB})}</h1>
-                        <span className="my-span" style={{color: selectedTheme.colorSecondary}}>Note before you visit</span>
+                        <span
+                            className="my-span"
+                            style={{
+                                color: selectedTheme.colorSecondary
+                            }}>Note before you visit</span>
                         <h1>{content}</h1>
                     </form>
                 </div>
                 <div className="col-md-1 calendar-divider h-100 d-none d-md-block">
                 </div>
-                <div className="col-md-5 container-defaults d-flex justify-content-center">
+                <div className="col-md-5 container-defaults d-flex">
                     <div className="row">
                         <div className="col-12">
                             <h1 style={{
@@ -45,13 +53,15 @@ export default function PreviewComponent({
 
                     </div>
                 </div>
-
                 <div className="mx-auto">
                     <Link to="/IceCreamPlace">
                         <button
                             className="black-button rounded-pill font-alegreya"
-                            style={{height: "50px"}}
-                            onClick={(e) => clearChoice()}
+                            style={{
+                                height: "50px",
+                                minWidth: "150px"
+                            }}
+                            onClick={() => clearChoice()}
                         >
                             Go Back
                         </button>

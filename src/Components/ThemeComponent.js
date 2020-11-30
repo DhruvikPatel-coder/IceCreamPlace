@@ -34,14 +34,14 @@ export default function ThemeComponent({
     }
 
     return (
-        <div className="container-fluid theme-div p-0 m-0">
+        <div className="container-fluid theme-div p-0">
             <TitleButtonContainer
                 text={"pick a theme"}
                 style={{zIndex: 9999}}
                 id={"pickATheme"}
             />
             <div
-                className="row p-4"
+                className="row p-5"
                 style={{
                     backgroundColor: getCurrentTheme().color,
                     color: getCurrentTheme().colorSecondary,
@@ -49,7 +49,6 @@ export default function ThemeComponent({
                     marginTop: "-75px",
                     marginRight: "0"
                 }}
-
             >
                 {all_themes.map(
                     x => (
@@ -61,11 +60,11 @@ export default function ThemeComponent({
                         />
                     )
                 )}
-                <div className=" d-flex flex-row justify-content-center align-items-center mx-auto mt-3">
+                <div className=" d-flex flex-row justify-content-center align-items-center mx-auto mt-5">
                     <Link to="/IceCreamPlace/output">
                         <button
                             className="black-button rounded-pill font-alegreya"
-                            style={{maxHeight: "60px", maxWidth: "200px"}} onClick={(e) => handleClick(e)}>
+                            style={{maxHeight: "60px"}} onClick={(e) => handleClick(e)}>
                             Show Preview
                         </button>
                     </Link>

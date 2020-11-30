@@ -3,15 +3,14 @@ import StoryTitle from "../Containers/StoryTitle";
 import StoryContent from "../Containers/StoryContent";
 import TitleButtonContainer from "../Containers/TitleButtonContainer";
 
-export default function StoryComponent({story_title, title, title2, subtitle1, subtitle2, para1, para2}) {
+export default function StoryComponent({story_title, title, subtitle1, subtitle2, para1, para2}) {
     return (
         <div className="container-fluid" style={{backgroundColor: "#FEFEFE", minHeight: "400px"}}>
             <TitleButtonContainer text={story_title}/>
-            <div className="row h-100" style={{paddingLeft: "50px", paddingRight: "50px", paddingBottom: "50px"}}>
-                <div className="col-md-6 container-defaults my-auto d-flex justify-content-center align-item-center">
+            <div className="row h-100 story-title-container">
+                <div className="col-md-6 d-flex" style={{paddingLeft: "5px"}}>
                     <StoryTitle
                         title={title}
-                        title2={title2}
                     />
                 </div>
                 <div className="col-md-1 divider my-auto d-none d-md-block"/>

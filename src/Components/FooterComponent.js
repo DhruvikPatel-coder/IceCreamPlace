@@ -6,7 +6,7 @@ import GitContainer from "../Containers/GitContainer";
 export default function FooterComponent() {
     return (
         <div className="d-flex align-items-center footer-div justify-content-around"
-            style={{fontSize: "5vmin"}}
+            style={{fontSize: "4vmin"}}
         >
             <div className="footer-content">
                 <div style={{
