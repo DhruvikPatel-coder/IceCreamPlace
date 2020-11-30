@@ -50,7 +50,7 @@
 
 .divider {
     border-left: 1px solid black;
-    height: 30% !important;
+    height: 170px !important;
 }
 
 .calendar-divider {
@@ -63,6 +63,13 @@
     color: black;
     border: 2px solid #484848;
     padding: 10px;
+}
+
+.black-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
 }
 
 .simple-button:hover {
@@ -85,29 +92,44 @@
     padding: 10px;
     height: 75px;
     width: 175px;
-    margin-bottom: -37.5px;
+    position: relative;
+    top: -37.5px;
 }
 
 .theme-div {
-    background-color: #FEEFE5;
-    padding: 80px 25px 0;
+    background-color: #ffffff;
+    padding: 1px 25px 100px;
+}
+
+.theme-row {
+    margin-top: 90px;
 }
 
 .theme-button {
+    flex: 3;
     height: 80%;
-    width: 100%;
-    background-color: #FEFDEF;
+    width: 80%;
+    background-color: #FEEFE5;
+    border: none;
+}
+
+.theme-button-highlighted {
+    flex: 3;
+    height: 80%;
+    width: 80%;
+    background-color: rgba(72, 72, 72, 0.4);
+    border: none;
 }
 
 .theme-button:hover {
-    background-color: #E4E3D7;
+    background-color: rgba(72, 72, 72, 0.2);
 }
 
 .calendar-div {
     background-color: #FEEFE5;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 40px;
+    height: 540px;
 }
 
 .form-style {
@@ -135,7 +157,7 @@ label, input, textarea {
 
 .footer-div {
     background-color: #FFE0CC;
-    height: 130px;
+    flex-direction: row;
     padding: 25px;
 }
 
@@ -147,20 +169,49 @@ label.active {
     background: #FEEFE5 !important;
 }
 
-textarea.md-textarea:focus:not([readonly]) + label {
-    color: #484848 !important;
-}
-
-.md-form.md-outline textarea.md-textarea:focus:not([readonly]) {
-    border-color: #484848 !important;
-    box-shadow: 0 0 0 1px #484848 !important;
-}
-
+textarea.md-textarea:focus:not([readonly]) + label,
 .md-form.md-outline input[type="text"]:focus:not([readonly]) + label {
     color: #484848 !important;
 }
 
+.md-form.md-outline textarea.md-textarea:focus:not([readonly]),
 .md-form.md-outline input[type="text"]:focus:not([readonly]) {
     border-color: #484848 !important;
     box-shadow: 0 0 0 1px #484848 !important;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.logo-container{
+    width: 26.33%
+}
+
+@media screen and (max-width: 786px){
+    .logo-container{
+        width: 80%
+    }
+    .calendar-div{
+       height: auto;
+    }
+    .footer-div {
+        /*background-color: #FFE0CC;*/
+        flex-direction: column;
+        /*padding: 25px;*/
+    }
+}
+
+.col-md-4-icons{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 960px) {
+    .col-md-4-icons {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }

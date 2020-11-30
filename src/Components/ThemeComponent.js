@@ -1,68 +1,75 @@
 import React from "react";
+import ThemeIcon from "../Containers/ThemeIcon";
 import TitleButtonContainer from "../Containers/TitleButtonContainer";
-import ThemeSelectorContainer from "../Containers/ThemeSelectorContainer";
+import {Link} from "react-router-dom";
 
 export default function ThemeComponent({
-                                           button_text,
-                                           theme,
-                                           setParentTheme
-}) {
+                                           selectedIndex,
+                                           setSelectedIndex,
+                                           all_themes,
+                                           date,
+                                           content
+                                       }) {
+    function getCurrentTheme(){
+        return all_themes[selectedIndex];
+    }
+
+    function handleClick(e) {
+        if (date === undefined) {
+            e.preventDefault();
+            showMessage("Please select a date");
+        } else if (content === undefined) {
+            e.preventDefault();
+            showMessage("You are required to put in content");
+        }
+    }
+
+    function showMessage(text) {
+        let message = document.getElementById("snackbar");
+        message.innerHTML = text;
+        message.className = "show";
+        setTimeout(function () {
+            message.className = message.className.replace("show", "");
+        }, 3000);
+    }
+
     return (
-        <div className="container-fluid theme-div">
-            <div className="row d-flex justify-content-around">
-                <ThemeSelectorContainer
-                    theme="choco brownie"
-                    availability="september-december"
-                    theme_color="#6b3e26"
-                    theme_color_2="#6b3e26"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-                <ThemeSelectorContainer
-                    theme="cherry chocolate"
-                    availability="january-may"
-                    theme_color="#DE3163"
-                    theme_color_2="#DE3163"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-                <ThemeSelectorContainer
-                    theme="Red velvet"
-                    availability="april-june"
-                    theme_color="#9c0000"
-                    theme_color_2="#9c0000"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-            </div>
-            <div className="row d-flex justify-content-around" style={{marginTop: "80px"}}>
-                <ThemeSelectorContainer
-                    theme="berry vanilla"
-                    availability="october-february"
-                    theme_color="#ffc5d9"
-                    theme_color_2="#ffc5d9"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-                <ThemeSelectorContainer
-                    theme="moe matcha"
-                    availability="december-august"
-                    theme_color="#c2f2d0"
-                    theme_color_2="#c2f2d0"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-                <ThemeSelectorContainer
-                    theme="mango nello"
-                    availability="february-july"
-                    theme_color="#ffcb85"
-                    theme_color_2="#ffcb85"
-                    selected_theme={theme}
-                    setParentTheme={setParentTheme}
-                />
-            </div>
-            <div className="d-flex" style={{marginTop: "80px"}}>
-                <TitleButtonContainer text={button_text}/>
+        <div className="container-fluid theme-div p-0 m-0">
+            <TitleButtonContainer
+                text={"pick a theme"}
+                style={{zIndex: 9999}}
+                id={"pickATheme"}
+            />
+            <div
+                className="row p-4"
+                style={{
+                    backgroundColor: getCurrentTheme().color,
+                    color: getCurrentTheme().colorSecondary,
+                    transition: "0.3s ease-in-out",
+                    marginTop: "-75px",
+                    marginRight: "0"
+                }}
+
+            >
+                {all_themes.map(
+                    x => (
+                        <ThemeIcon
+                            key={x.index}
+                            theme={x}
+                            setSelectedIndex={(index) => setSelectedIndex(index)}
+                            selectedIndex={selectedIndex}
+                        />
+                    )
+                )}
+                <div className=" d-flex flex-row justify-content-center align-items-center mx-auto mt-3">
+                    <Link to="/output">
+                        <button
+                            className="black-button rounded-pill font-alegreya"
+                            style={{maxHeight: "60px", maxWidth: "200px"}} onClick={(e) => handleClick(e)}>
+                            Show Preview
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
     );

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function HeartContainer() {
+export default function HeartContainer({height, width}) {
     return (
-        <div style={{height: "60px", width: "60px"}}>
+        <div style={{height: `${height}px`, width: `${width}px`}}>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                  viewBox="0 0 391.837 391.837" style={{enableBackground: "new 0 0 391.837 391.837"}}>
                 <g>

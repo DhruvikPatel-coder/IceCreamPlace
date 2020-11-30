@@ -2,13 +2,15 @@ import React from "react";
 import {DatePicker} from "react-nice-dates";
 import {enGB} from "date-fns/locale";
 import {getDay} from "date-fns";
+import TitleButtonContainer from "../Containers/TitleButtonContainer";
 
 export default function CalendarComponent({
                                               date,
                                               content,
                                               setParentContent,
-                                              setParentDate
-}) {
+                                              setDate,
+                                              availableThemes
+                                          }) {
     const modifiers = {
         highlight: date => getDay(date) === 0 // Highlights Sundays
     }
@@ -20,15 +22,24 @@ export default function CalendarComponent({
     function getValue(e) {
         return e.nativeEvent.target.value;
     }
+
     return (
-        <div className="container-fluid calendar-div" style={{height: "640px"}}>
+        <div className="container-fluid calendar-div"
+             style={{
+                 paddingBottom: "50px"
+             }}
+        >
+            <TitleButtonContainer
+                text={"plan ahead"}
+                id={"planAhead"}
+            />
             <div className="row h-100">
                 <div className="col-md-6 container-defaults d-flex justify-content-center">
                     <form className="form-style">
                         <span className="my-span">Pick a date</span>
                         <DatePicker
                             date={date}
-                            onDateChange={setParentDate}
+                            onDateChange={(val) =>setDate(val)}
                             locale={enGB}
                             modifiers={modifiers}
                             modifiersClassNames={modifiersClassNames}
@@ -37,7 +48,7 @@ export default function CalendarComponent({
                                 <div className="md-form md-outline form-lg">
                                     <input
                                         value={date}
-                                        style={{width: "100%"}}
+                                        style={{width: "100%", border: "1px solid #c9bcb3", minHeight: "60px"}}
                                         className={'input' + (focused ? ' -focused' : '') + " form-control form-control-lg"}
                                         {...inputProps}
                                         placeholder=""
@@ -48,35 +59,48 @@ export default function CalendarComponent({
                         </DatePicker>
                         <span className="my-span">Make a note</span>
                         <div className="md-form md-outline">
-                                <textarea
-                                    onChange={e => setParentContent(getValue(e))}
-                                    value={content}
-                                    name="myTextArea"
-                                    id="myTextArea"
-                                    spellCheck="true"
-                                    rows="5"
-                                    className="md-textarea form-control"
-                                />
+                            <textarea
+                                onChange={e => setParentContent(getValue(e))}
+                                value={content}
+                                name="myTextArea"
+                                id="myTextArea"
+                                spellCheck="true"
+                                rows="5"
+                                className="md-textarea form-control"
+                                style={{width: "100%", border: "1px solid #c9bcb3"}}
+                            />
                             <label htmlFor="myTextArea">What's in your mind...</label>
                         </div>
                     </form>
                 </div>
-                <div className="col-md-1 calendar-divider my-auto">
+                <div className="col-md-1 calendar-divider my-auto d-none d-md-block">
                 </div>
-                <div className="col-md-5 container-defaults d-flex">
-                    <div className="row">
-                        <div className="col-10">
-                            <strong><p className="font-helvetica">Ice-creams available</p></strong>
+                <div className="col-md-5 container-defaults d-flex flex-column justify-content-start align-items-between">
+                    <div className="d-flex flex-column justify-content-center align-items-center">
+                        <div className="col-10 text-center">
+                            <span className="my-span text-center">Ice-creams available</span>
                         </div>
-                        <div className="col-10">
-                            <p className="font-helvetica">Abx</p>
-                            <p className="font-helvetica">Abx</p>
-                            <p className="font-helvetica">Abx</p>
-                            <p className="font-helvetica">Abx</p>
+                        <div className="col-10 mt-3">
+                            <div className="list-group">
+                            {/*<ul>*/}
+                                {availableThemes.map(x => {
+                                    return (
+                                        <a className="list-group-item list-group-item-action font-helvetica text-center mb-1" key={x.name} href={`#${x.name}`}>
+                                           <h3>
+                                               {x.name}
+                                           </h3>
+                                        </a>
+                                        )
+                                    })
+                                }
+                            </div>
+                            {/*</ul>*/}
+
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="snackbar"/>
         </div>
     );
 }

@@ -1,22 +1,50 @@
 import React from "react";
 
-export default function ThemeSelectorContainer({
-                                                   theme,
-                                                   availability,
-                                                   theme_color,
-                                                   theme_color_2,
-                                                   selected_theme,
-                                                   setParentTheme
-}) {
-    function ThemeSelected() {
-        console.log("Coming here");
+export default function ThemeIcon({
+                                      theme,
+                                      selectedIndex,
+                                      setSelectedIndex,
+                                  }) {
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+
+    function getStartMonth() {
+        let start = theme.availability.start;
+        let startDate = new Date(start);
+        // alert(startDate)
+        return monthNames[startDate.getMonth()].substr(0, 3);
+    }
+
+    function getStartDate() {
+        return (new Date(theme.availability.start)).getDate();
+    }
+
+    function getEndMonth() {
+        let end = theme.availability.end;
+        let endDate = new Date(end);
+
+        return monthNames[endDate.getMonth()].substr(0, 3);
+    }
+
+    function getEndDate() {
+        return (new Date(theme.availability.end)).getDate();
     }
 
     return (
-        <div className="col-md-3">
+        <div
+            className="col-md-4-icons"
+            id={theme.name}
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                paddingTop: "30px",
+                paddingLeft: "20px"
+            }}>
             <button
-                className="row justify-content-center align-items-center rounded-circle theme-button"
-                onClick={() => ThemeSelected()}
+                className={`row justify-content-center align-items-center rounded-circle mx-auto ${(selectedIndex === theme.index) ? "theme-button-highlighted" : "theme-button"}`}
+                style={{width: "300px", height: "300px"}}
+                onClick={() => setSelectedIndex(theme.index)}
             >
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                      width="70%" height="100%" viewBox="0 0 300 300"
@@ -27,13 +55,13 @@ export default function ThemeSelectorContainer({
                             fill="black"/>
                         <path
                             d="M175.361 117.63C172.544 116.893 169.641 115.94 166.694 114.9C147.411 107.967 125.831 94.7932 117.771 84.3069C115.951 82.0101 114.824 79.8869 114.478 77.9801C114.391 77.5469 114.261 76.8532 114.521 76.0732C114.911 74.8164 116.168 73.2132 119.894 71.6964C119.937 71.6532 119.981 71.6532 119.981 71.6532L121.671 70.9164L123.534 70.1364C129.254 67.7096 135.061 65.2395 140.131 62.3795C146.284 58.8264 151.398 54.6664 153.954 49.2064C154.474 48.1233 154.864 46.9964 155.167 45.8264C155.644 43.8764 154.216 41.08 154 39C153.5 38 150.359 30.6865 152.5 30.0002C155.631 28.9966 167.007 36.4558 168.5 38C169.28 38.8231 173.306 43.59 174 44.5C176.21 47.4032 176 50 176 53C176.116 53.3617 176.459 58.1923 176.5 58.5C177 60.5 177 62.3795 175 64.5C174.627 64.8951 171.764 68.4901 171.461 68.9237C171.331 69.1406 171.158 69.3569 171.028 69.5737C170.291 70.6137 170.074 71.9569 170.464 73.1706C170.638 73.7774 170.898 74.2974 171.244 74.7306C171.678 75.2506 172.241 75.6838 172.848 75.9438C175.231 77.0269 177.354 78.1969 179.261 79.5406C184 82 189.196 89.0768 189.5 92.5C191 97 192 104.5 190 108.5C190.5 111 187.584 117.606 186 119.5C183.831 122.093 176.5 117.928 175.361 117.63Z"
-                            fill={theme_color}/>
+                            fill={theme.color}/>
                         <path
                             d="M198.588 146.1C198.501 145.883 198.371 145.667 198.241 145.493C197.504 144.15 196.551 142.98 195.381 141.94C191.611 138.56 186.194 137 182.771 137C172.848 136.307 158.808 131.713 146.068 125.993C143.771 124.953 141.518 123.87 139.308 122.743C137.748 121.963 136.188 121.14 134.715 120.36C133.675 119.753 132.678 119.19 131.682 118.627C130.642 118.064 129.601 117.457 128.648 116.85C127.998 116.46 127.391 116.113 126.828 115.68C125.008 114.51 123.318 113.383 121.888 112.3C121.281 111.823 120.718 111.39 120.242 110.957C119.635 110.48 119.071 109.96 118.551 109.484C118.031 109.007 117.598 108.53 117.165 108.097C116.255 107.1 115.042 106.624 113.698 106.667C112.398 106.754 111.185 107.404 110.405 108.487C109.278 110.09 108.238 111.65 107.328 113.167C91.901 138.95 106.201 156.847 110.145 161.007L143.165 260.067L148.841 277.054C149.405 278.787 151.095 280 152.958 280C154.821 280 156.468 278.787 157.075 277.054L161.668 263.187L166.262 249.494L195.078 163L195.815 160.747C197.592 158.407 198.632 156.284 199.195 154.334C200.148 150.91 199.541 148.137 198.588 146.1ZM152.958 261.973L147.801 246.59L119.938 163H185.935L152.958 261.973ZM189.748 154.333H115.735C112.355 150.65 102.822 137.65 114.738 117.673C116.428 119.06 118.378 120.49 120.545 121.876C122.842 123.436 125.398 124.996 128.085 126.556C144.335 135.786 166.912 144.583 182.468 145.666C184.938 145.666 189.618 147.443 190.745 149.826C191.395 151.127 190.701 152.817 189.748 154.333Z"
                             fill="black"/>
                         <path
                             d="M190 155L115 155.5C112.724 151.308 108.27 144.237 107.5 137.5C106.758 131.016 109.102 123.453 112.078 115C114.651 116.874 117.514 118.749 120.524 120.623C138.727 131.714 164.017 142.284 181.443 143.586C184.21 143.586 189.452 145.721 190.715 148.585C191.443 150.147 193 155 190 155Z"
-                            fill={theme_color_2}/>
+                            fill={theme.color}/>
                         <path d="M185.934 163L152.958 261.973L147.801 246.59L176.661 163H185.934Z" fill="#F9A825"/>
                         <path d="M176.662 163L147.802 246.59L119.938 163H176.662Z" fill="#FFC107"/>
                         <path
@@ -53,12 +81,17 @@ export default function ThemeSelectorContainer({
                     </defs>
                 </svg>
             </button>
-            <div className="row d-flex font-amatic" style={{marginTop: "10px"}}>
-                <div className="col-12">
-                    <h2 className="text-center">{theme}</h2>
+            <div
+                className="row d-flex font-amatic"
+                style={{
+                    marginTop: "10px",
+                    flex:"1"
+                }}>
+                <div className="w-100">
+                    <h2 className="text-center">{theme.name}</h2>
                 </div>
-                <div className="col-12">
-                    <h2 className="text-center">{availability}</h2>
+                <div className="w-100">
+                    <h2 className="text-center">{getStartDate()}{" "}{getStartMonth()}{" - "}{getEndDate()}{" "}{getEndMonth()}</h2>
                 </div>
             </div>
         </div>
