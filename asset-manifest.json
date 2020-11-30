@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/IceCreamPlace/static/css/main.2e1d25e1.chunk.css",
-    "main.js": "/IceCreamPlace/static/js/main.5f5e6a73.chunk.js",
-    "main.js.map": "/IceCreamPlace/static/js/main.5f5e6a73.chunk.js.map",
+    "main.css": "/IceCreamPlace/static/css/main.73929955.chunk.css",
+    "main.js": "/IceCreamPlace/static/js/main.fabb3885.chunk.js",
+    "main.js.map": "/IceCreamPlace/static/js/main.fabb3885.chunk.js.map",
     "runtime-main.js": "/IceCreamPlace/static/js/runtime-main.047ae60c.js",
     "runtime-main.js.map": "/IceCreamPlace/static/js/runtime-main.047ae60c.js.map",
     "static/css/2.642d3f1b.chunk.css": "/IceCreamPlace/static/css/2.642d3f1b.chunk.css",
-    "static/js/2.08fc0304.chunk.js": "/IceCreamPlace/static/js/2.08fc0304.chunk.js",
-    "static/js/2.08fc0304.chunk.js.map": "/IceCreamPlace/static/js/2.08fc0304.chunk.js.map",
+    "static/js/2.e28f036f.chunk.js": "/IceCreamPlace/static/js/2.e28f036f.chunk.js",
+    "static/js/2.e28f036f.chunk.js.map": "/IceCreamPlace/static/js/2.e28f036f.chunk.js.map",
     "index.html": "/IceCreamPlace/index.html",
     "static/css/2.642d3f1b.chunk.css.map": "/IceCreamPlace/static/css/2.642d3f1b.chunk.css.map",
-    "static/css/main.2e1d25e1.chunk.css.map": "/IceCreamPlace/static/css/main.2e1d25e1.chunk.css.map",
-    "static/js/2.08fc0304.chunk.js.LICENSE.txt": "/IceCreamPlace/static/js/2.08fc0304.chunk.js.LICENSE.txt",
+    "static/css/main.73929955.chunk.css.map": "/IceCreamPlace/static/css/main.73929955.chunk.css.map",
+    "static/js/2.e28f036f.chunk.js.LICENSE.txt": "/IceCreamPlace/static/js/2.e28f036f.chunk.js.LICENSE.txt",
     "static/media/App.css": "/IceCreamPlace/static/media/ice-cream-background.3fa052ac.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.047ae60c.js",
     "static/css/2.642d3f1b.chunk.css",
-    "static/js/2.08fc0304.chunk.js",
-    "static/css/main.2e1d25e1.chunk.css",
-    "static/js/main.5f5e6a73.chunk.js"
+    "static/js/2.e28f036f.chunk.js",
+    "static/css/main.73929955.chunk.css",
+    "static/js/main.fabb3885.chunk.js"
   ]
 }
