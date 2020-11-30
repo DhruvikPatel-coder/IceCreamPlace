@@ -42,13 +42,13 @@ export default function FooterComponent() {
                 }}>by </div>
             </div>
             <GitContainer
-                url={"https://www.github.com/dhruvikpatel-coder/MyReminder"}
+                url={"https://www.github.com/dhruvikpatel-coder/IceCreamPlace"}
                 height={60}
                 width={60}
             />
             <div className="footer-content">
                 <a
-                    href="https://www.github.com/dhruvikpatel-coder/MyReminder"
+                    href="https://www.github.com/dhruvikpatel-coder/IceCreamPlace"
                 >
                     <div style={{
                         fontFamily: "'Helvetica Neue', Arial, sans-serif",

@@ -62,7 +62,7 @@ export default function ThemeComponent({
                     )
                 )}
                 <div className=" d-flex flex-row justify-content-center align-items-center mx-auto mt-3">
-                    <Link to="/output">
+                    <Link to="/IceCreamPlace/output">
                         <button
                             className="black-button rounded-pill font-alegreya"
                             style={{maxHeight: "60px", maxWidth: "200px"}} onClick={(e) => handleClick(e)}>

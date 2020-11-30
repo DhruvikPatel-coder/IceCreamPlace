@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './App.css';
 import './snackbar.css';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Redirect, {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import InputComponent from "./Components/InputComponent";
 import OutputComponent from "./Components/OutputComponent";
 import 'react-nice-dates/build/style.css';
@@ -155,7 +155,7 @@ function App() {
                         availableThemes={filterValidDates(all_themes, date)}
                     />
                 </Route>
-                <Route exact path="/output">
+                <Route exact path="/IceCreamPlace/output">
                     <OutputComponent
                         selectedTheme={getSelectedTheme()}
                         date={date}
@@ -166,7 +166,7 @@ function App() {
                     />
                 </Route>
                 <Route path="*">
-                    <h1>You have reached to a undefined path.</h1>
+                    <Redirect to="/IceCreamPlace" />
                 </Route>
             </Switch>
         </Router>

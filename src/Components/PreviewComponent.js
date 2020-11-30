@@ -48,7 +48,7 @@ export default function PreviewComponent({
                 </div>
 
                 <div className="mx-auto">
-                    <Link to="/">
+                    <Link to="/IceCreamPlace">
                         <button
                             className="black-button rounded-pill font-alegreya"
                             style={{height: "50px"}}
