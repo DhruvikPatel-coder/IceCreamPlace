@@ -37,7 +37,7 @@ export default function PreviewComponent({
                             className="my-span"
                             style={{
                                 color: selectedTheme.colorSecondary
-                            }}>Note before you visit</span>
+                            }}>Note before your visit</span>
                         <h1>{content}</h1>
                     </form>
                 </div>
