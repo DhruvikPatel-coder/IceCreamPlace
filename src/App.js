@@ -143,7 +143,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/IceCreamPlace">
                     <InputComponent
                         selectedIndex={currentIndex}
                         setSelectedIndex={(index) => setCurrentIndex(index)}
