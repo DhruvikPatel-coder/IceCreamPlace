@@ -2,18 +2,7 @@
     background-color: #FEEFE5;
     min-height: 150px;
     padding: 25px;
-}
-
-.parallax {
-    /* The image used */
-    background-image: url("./images/ice-cream-background.jpg");
-    /* Set a specific height */
-    min-height: 550px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
 }
 
 .left-div-title {
@@ -189,16 +178,32 @@ button:focus {
 }
 
 @media screen and (max-width: 786px){
+    .header-div {
+        display: block;
+        padding: 50px !important;
+    }
     .logo-container{
-        width: 80%
+        width: 100%
     }
     .calendar-div{
        height: auto;
     }
     .footer-div {
-        /*background-color: #FFE0CC;*/
         flex-direction: column;
-        /*padding: 25px;*/
+    }
+}
+
+@media screen and (min-width: 786px){
+    .parallax {
+        /* The image used */
+        background-image: url("./images/ice-cream-background.jpg");
+        /* Set a specific height */
+        min-height: 550px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

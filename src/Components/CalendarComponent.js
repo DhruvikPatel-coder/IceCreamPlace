@@ -82,7 +82,6 @@ export default function CalendarComponent({
                         </div>
                         <div className="col-10 mt-3">
                             <div className="list-group">
-                            {/*<ul>*/}
                                 {availableThemes.map(x => {
                                     return (
                                         <a className="list-group-item list-group-item-action font-helvetica text-center mb-1" key={x.name} href={`#${x.name}`}>
@@ -94,8 +93,6 @@ export default function CalendarComponent({
                                     })
                                 }
                             </div>
-                            {/*</ul>*/}
-
                         </div>
                     </div>
                 </div>

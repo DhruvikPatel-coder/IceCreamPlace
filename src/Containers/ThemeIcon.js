@@ -5,14 +5,13 @@ export default function ThemeIcon({
                                       selectedIndex,
                                       setSelectedIndex,
                                   }) {
-
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
 
     function getStartMonth() {
         let start = theme.availability.start;
         let startDate = new Date(start);
-        // alert(startDate)
+
         return monthNames[startDate.getMonth()].substr(0, 3);
     }
 

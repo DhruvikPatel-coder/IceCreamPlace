@@ -10,7 +10,6 @@ export default function PreviewComponent({
                                              setParentDate,
                                              setParentContent
                                         }) {
-
     function clearChoice(){
         setParentContent("");
         setParentDate();

@@ -4,9 +4,6 @@ import HeartContainer from "../Containers/HeartContainer";
 import GitContainer from "../Containers/GitContainer";
 
 export default function FooterComponent() {
-
-
-
     return (
         <div className="d-flex align-items-center footer-div justify-content-around"
             style={{fontSize: "5vmin"}}
@@ -30,10 +27,10 @@ export default function FooterComponent() {
                     fontWeight: "300"
                 }}>for </div>
             </div>
-            <div className="logo-container mx-auto">
+            <div className="logo-container">
                 <LogoContainer/>
             </div>
-            <div className="footer-content mx-auto">
+            <div className="footer-content">
                 <div style={{
                     fontFamily: "'Helvetica Neue', Arial, sans-serif",
 

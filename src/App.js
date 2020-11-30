@@ -15,7 +15,10 @@ class Theme {
 
     constructor(_obj) {
         this.name = _obj.name || "";
-        this.availability = _obj.availability || {start: (new Date()).toString(), end: "01-01-9999"};
+        this.availability = _obj.availability || {
+            start: (new Date()).toString(),
+            end: "01/01/9999"
+        };
         this.color = _obj.color || "#FFFFFF";
         this.index = _obj.index || 0;
         this.colorSecondary = _obj.colorSecondary || "#484848";
@@ -41,8 +44,8 @@ function App() {
             {
                 name: "Vanilla",
                 availability: {
-                    start: "01-01-2020",
-                    end: "12-31-2020"
+                    start: "01/01/2020",
+                    end: "12/31/2020"
                 },
                 color: "#FFFFFF",
                 colorSecondary: "#484848",
@@ -52,8 +55,8 @@ function App() {
             {
                 name: "Romantic Rose",
                 availability: {
-                    start: "01-01-2020",
-                    end: "06-02-2020"
+                    start: "01/01/2020",
+                    end: "06/02/2020"
                 },
                 color: "#FB3F26",
                 colorSecondary: "#fefefe",
@@ -63,8 +66,8 @@ function App() {
             {
                 name: "Cherry Chocolate",
                 availability: {
-                    start: "02-14-2020",
-                    end: "12-16-2020"
+                    start: "02/14/2020",
+                    end: "12/16/2020"
                 },
                 color: "#DE3163",
                 colorSecondary: "#fefefe",
@@ -74,8 +77,8 @@ function App() {
             {
                 name: "Red Velvet",
                 availability: {
-                    start: "12-15-2020",
-                    end: "02-02-2020"
+                    start: "12/15/2020",
+                    end: "02/02/2020"
                 },
                 color: "#9C0000",
                 colorSecondary: "#fefefe",
@@ -85,8 +88,8 @@ function App() {
             {
                 name: "Berry Vanilla",
                 availability: {
-                    start: "02-24-2020",
-                    end: "07-09-2020"
+                    start: "02/24/2020",
+                    end: "07/09/2020"
                 },
                 color: "#C2F2D0",
                 index: 4
@@ -95,8 +98,8 @@ function App() {
             {
                 name: "Moe Matcha",
                 availability: {
-                    start: "06-10-2020",
-                    end: "01-10-2020"
+                    start: "06/10/2020",
+                    end: "01/10/2020"
                 },
                 color: "#FFCB85",
                 index: 5
@@ -105,8 +108,8 @@ function App() {
             {
                 name: "Mint Oreo",
                 availability: {
-                    start: "12-15-2020",
-                    end: "01-10-2021"
+                    start: "12/15/2020",
+                    end: "01/10/2021"
                 },
                 color: "#27F2D9",
                 colorSecondary: "#fefefe",
@@ -116,8 +119,8 @@ function App() {
             {
                 name: "Tiger Orange",
                 availability: {
-                    start: "12-15-2020",
-                    end: "02-02-2020"
+                    start: "12/15/2020",
+                    end: "02/02/2020"
                 },
                 color: "#FD6A02",
                 colorSecondary: "#fefefe",
@@ -127,8 +130,8 @@ function App() {
             {
                 name: "Cookie Dough",
                 availability: {
-                    start: "03-18-2020",
-                    end: "05-20-2020"
+                    start: "03/18/2020",
+                    end: "05/20/2020"
                 },
                 color: "#BD8C61",
                 colorSecondary: "#fefefe",

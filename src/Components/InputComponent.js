@@ -18,7 +18,7 @@ export default function InputComponent({
     return (
         <div>
             <HeaderComponent/>
-            <div className="parallax d-flex"/>
+            <div className="parallax"/>
             <StoryComponent
                 title={"New forms of"}
                 title2={"Pure Happiness"}
@@ -43,17 +43,6 @@ export default function InputComponent({
                 setSelectedIndex={(index) => setSelectedIndex(index)}
                 all_themes={all_themes}
             />
-            {/*<StoryComponent*/}
-            {/*    title={"What's for you"}*/}
-            {/*    title2={"in this visit?"}*/}
-            {/*    subtitle1={"We dont want to confuse you..."}*/}
-            {/*    subtitle2={"Choose your days of visit wisely..."}*/}
-            {/*    para1={"... in choosing from thousands of products we can offer. Select from " +*/}
-            {/*    "our dynamic list of new flavors."}*/}
-            {/*    para2={"... or just visit everyday! New flavors await you. Select your dates of " +*/}
-            {/*    "visit to know what’s in the store for you that day!"}*/}
-            {/*    story_title="plan"*/}
-            {/*/>*/}
             <FooterComponent/>
         </div>
     );

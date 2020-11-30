@@ -5,7 +5,6 @@ import FooterComponent from "./FooterComponent";
 import PreviewComponent from "./PreviewComponent";
 
 export default function OutputComponent(props) {
-
     return (
         <div>
             <HeaderComponent/>
