@@ -51,7 +51,7 @@
 
 .calendar-divider {
     border-left: 1px solid black;
-    height: 50% !important;
+    height: 150px !important;
 }
 
 .simple-button {
@@ -123,9 +123,9 @@
 
 .calendar-div {
     background-color: #FEEFE5;
+    padding-top: 25px;
     padding-left: 25px;
     padding-right: 25px;
-    height: 540px;
 }
 
 .form-style {

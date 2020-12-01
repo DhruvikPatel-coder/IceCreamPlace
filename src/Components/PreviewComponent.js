@@ -20,7 +20,6 @@ export default function PreviewComponent({
     return (
         <div className="container-fluid calendar-div d-flex flex-column align-items-center justify-content-center"
              style={{
-                height: "540px",
                  backgroundColor: selectedTheme.color,
                  color: selectedTheme.colorSecondary
         }}>
@@ -55,7 +54,13 @@ export default function PreviewComponent({
 
                     </div>
                 </div>
-                <div className="mx-auto">
+                <div
+                    className="mx-auto"
+                    style={{
+                        marginTop: "25px",
+                        marginBottom: "40px"
+                    }}
+                >
                     <Link to="/IceCreamPlace">
                         <button
                             className="black-button rounded-pill font-alegreya"
