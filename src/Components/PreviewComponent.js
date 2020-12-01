@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {format} from "date-fns";
 import {enGB} from "date-fns/locale";
+import TitleDivContainer from "../Containers/TitleDivContainer";
 
 // This component is responsible of showing the preview of output based on the theme selected.
 export default function PreviewComponent({
@@ -23,6 +24,10 @@ export default function PreviewComponent({
                  backgroundColor: selectedTheme.color,
                  color: selectedTheme.colorSecondary
         }}>
+            <TitleDivContainer
+                text={"plan ahead"}
+                id={"planAhead"}
+            />
             <div className="row h-100 d-flex flex-row align-items-center justify-content-center w-100">
                 <div className="col-md-6 container-defaults d-flex justify-content-center">
                     <form className="form-style">
