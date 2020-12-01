@@ -13,7 +13,7 @@ export default function PreviewComponent({
                                         }) {
     // Clears the input fields back button is pressed
     function clearChoice(){
-        setParentContent("");
+        setParentContent();
         setParentDate();
     }
 

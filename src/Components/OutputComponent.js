@@ -3,9 +3,14 @@ import StoryComponent from "./StoryComponent";
 import FooterComponent from "./FooterComponent";
 import PreviewComponent from "./PreviewComponent";
 import OutputHeaderComponent from "./OutputHeaderComponent";
+import {Redirect} from "react-router-dom";
 
 // This component renders the output page which is responsible for presenting the output according to theme selected
 export default function OutputComponent(props) {
+    if (props.content === undefined) {
+        return <Redirect to={"/MyReminder"} />
+    }
+
     return (
         <div>
             {/*Calls header component*/}
@@ -26,7 +31,6 @@ export default function OutputComponent(props) {
                 content={props.content}
                 setParentDate={props.setParentDate}
                 setParentContent={props.setParentContent}
-                setSelectedIndex={props.setSelectedIndex}
                 selectedTheme={props.selectedTheme}
             />
             {/*Calls footer component*/}
